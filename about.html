@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emre Arslan</title>
+    <style>
+        #container {
+            position: relative;
+        }
+
+        #title {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
+        }
+
+        #about-body {
+            display: grid;
+            grid-template-rows: 1fr;
+            position: relative;
+            margin: 0 10vw 10vw;
+            color: black;
+            font-size: 20px;
+            line-height: 1.2;
+            text-align: justify;
+            bottom: 0;
+        }
+
+        #brown-logo-container {
+            width: 100vw;
+            padding-top: 100px;
+        }
+
+        #brown-logo {
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+        }
+
+        #navbar {
+            position: absolute;
+            top: 10px;
+            padding: 15px;
+            right: 15px;
+            z-index: 2;
+            /*background: lightgray;*/
+            font-size: 20px;
+        }
+        #navbar a {
+            padding: 10px;
+            text-decoration: underline;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="title">
+        <h1>About</h1>
+    </div>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+    </div>
+    <div id="brown-logo-container">
+        <img src="assets/brown_logo.png" alt="brown logo" width="225" height="225" id="brown-logo">
+    </div>
+    <div id="about-body">
+        <p>
+            I am a 3rd year Computer Science student at Brown University. I am mainly interested in computer graphics
+            and AI-Machine Learning/Deep Learning, but I also enjoy working in other areas of computer science such as
+            computer systems and high performance computing.
+        </p>
+        <p>
+            Currently, I am a research assistant at Brown on a project focused on vector databases and AI. Previously, I
+            worked as a research assistant to develop a new iteration of the database management systems course at
+            Brown, and was a teaching assistant for the course. I was also a teaching assistant for a digital computing
+            systems course. And for over a year, I worked on a last mile delivery startup attending investor meetings as
+            a technical representative and developing the company's product and tech infrastructure.
+        </p>
+        <p>
+            I am now looking for a 3-month Summer internship for the summer of 2024. If you are interested in hiring me,
+            please contact me at <a href="mailto:emre_arslan@brown.edu" target="_blank">emre_arslan@brown.edu</a>. My
+            resume can be found <a href="./assets/Emre%20Arslan%20Resume.pdf" target="_blank">here</a>.
+        </p>
+        <p>
+            In my free time, I am a vocalist and guitarist in a band that often performs at local venues. I also enjoy
+            cooking, and I was a member of the Brown University Table Tennis team.
+        </p>
+    </div>
+</div>
+<script src="./about.js"></script>
+</body>
+</html>

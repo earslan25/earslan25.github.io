@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emre Arslan</title>
+    <style>
+        /*set body to 0.7 rgb */
+        body {
+            /*background-color: rgba(0, 0, 0, 0.3);*/
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #gfx-main {
+            /*border: 1px solid #000; !* Just for visual reference *!*/
+            /*display: block;*/
+        }
+
+        #title {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            left: 50px; /* Adjust the left position as needed */
+            z-index: 2; /* Higher z-index to appear on top of the canvas */
+            font-size: 20px;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        #body-container {
+            /*two grid rows*/
+            display: grid;
+            grid-template-rows: 50vh auto;
+        }
+
+        #canvas-container {
+            position: relative;
+        }
+
+        #canvas-footer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 20px;
+            z-index: 2;
+            color: black;
+        }
+
+        #projects-body {
+            position: relative;
+            margin: 30px;
+            z-index: 2;
+            /*color: whitesmoke;*/
+            color: black;
+            bottom: 0;
+        }
+        .project-description {
+            position: relative;
+            margin: 30px;
+            z-index: 2;
+            /*color: whitesmoke;*/
+            color: black;
+        }
+
+        #navbar {
+            position: absolute;
+            top: 10px;
+            padding: 15px;
+            right: 15px;
+            z-index: 2;
+            /*background: lightgray;*/
+            font-size: 20px;
+        }
+        #navbar a {
+            padding: 10px;
+            text-decoration: underline;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="title">
+        <h1>Projects</h1>
+    </div>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+    </div>
+    <div id="body-container">
+        <div id="canvas-container">
+            <canvas id="gfx-main" width="800" height = "600"></canvas>
+            <div id="canvas-footer">
+                <p>Rendering with my WebGPU graphics library</p>
+            </div>
+        </div>
+        <div id="projects-body">
+            <div class="project-description">
+                <h2>GFX-MAIN</h2>
+                <p>
+                    Gfx-Main is a high-level graphics library that I am developing for the web. It is written in
+                    TypeScript and uses WebGPU for real-time rendering. It currently supports basic 3D rendering,
+                    lighting, materials, textures, and .obj file loading. It is still in development, and I am planning
+                    to add more features like integrating real-time ray-tracing, similar to the one in the home page of
+                    this website.
+                </p>
+                <p>
+                    Skills: TypeScript, JavaScript, WebGPU, WGSL
+                </p>
+            </div>
+            <div class="project-description">
+                <h2>3D Poisson Equation Solver</h2>
+                <p>
+                    This is a 3D Poisson equation solver that I developed as a final project for my graduate-level
+                    parallel computing course. It uses the Jacobi iterative method and the Gauss-Seidel Red-Black
+                    method to solve the Poisson equation in 3D. It is written in C++ and uses OpenMP, MPI, and CUDA for
+                    parallelization on CPU and GPU.
+                </p>
+                <p>
+                    Skills: C++, OpenMP, MPI, CUDA
+                </p>
+            </div>
+            <div class="project-description">
+                <h2>3D Gaussian Splatting Camera Optimization</h2>
+                <p>
+                    For this project, we built on the 3D Gaussian Splatting for Real-Time Radiance Field Rendering
+                    research paper Kerbl et al. (2023) and used AI to do camera optimization to find the most memorable
+                    camera position in the 3D space. We used PyTorch to do training on the differentiable renderer and
+                    find the optimal camera position based on the ResMem score achieved by the image rendered from that
+                    camera position.
+                </p>
+                <p>
+                    Skills: Python, PyTorch
+                </p>
+            </div>
+            <br/>
+            <p>
+                More details can be found on
+                <a href="./assets/Emre%20Arslan%20Resume.pdf" target="_blank">my resume</a>.
+            </p>
+        </div>
+    </div>
+</div>
+<script src="dist/main_gfx_main.js"></script>
+<script src="./projects.js"></script>
+</body>
+</html>
