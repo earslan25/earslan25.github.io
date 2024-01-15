@@ -58,6 +58,16 @@
             font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
         }
 
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-size: 50px;
+            font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+        }
+
     </style>
 </head>
 <body>
@@ -67,6 +77,7 @@
         <p>Welcome to my fully <b>ray-traced</b> homepage!</p>
     </div>
     <canvas id="gfx-main" width="800" height = "600"></canvas>
+    <span id="loading">Loading...</span>
     <span id="buttons">
         <button id="btn-toggle">Toggle Camera Movement</button>
         <button id="btn-remove">Toggle Stars</button>
