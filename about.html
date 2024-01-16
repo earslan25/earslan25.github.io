@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emre Arslan</title>
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /*background: #222222;*/
+            /*background-color: rgba(0, 0, 0, 0.01);*/
+        }
+
         #container {
             position: relative;
+            height: 100%;
         }
 
         #title {
@@ -15,8 +24,10 @@
             top: 10px;
             left: 50px;
             font-size: 20px;
-            color: black;
+            /*color: rgba(0, 0, 0, 0.9);*/
+            /*color: whitesmoke;*/
             cursor: pointer;
+            font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
         }
 
         #about-body {
@@ -25,15 +36,19 @@
             position: relative;
             margin: 0 10vw 10vw;
             color: black;
+            /*color: whitesmoke;*/
             font-size: 20px;
             line-height: 1.2;
             text-align: justify;
             bottom: 0;
+            top: 80px;
+            font-family: 'book antiqua', palatino, serif;
         }
 
         #brown-logo-container {
             width: 100vw;
-            padding-top: 100px;
+            padding-top: 60px;
+            height: 120px;
         }
 
         #brown-logo {
@@ -41,6 +56,18 @@
             margin-right: auto;
             margin-left: auto;
             display: block;
+        }
+
+        #bg-photo {
+            position: fixed;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+
+            height: 120vh;
+            width: 100vw;
+            opacity: 0.07;
+            top: 10px;
         }
 
         #navbar {
@@ -51,11 +78,13 @@
             z-index: 2;
             /*background: lightgray;*/
             font-size: 20px;
+            font-family: 'book antiqua', palatino, serif;
         }
         #navbar a {
             padding: 10px;
             text-decoration: underline;
             color: black;
+            /*color: whitesmoke;*/
         }
 
     </style>
@@ -71,8 +100,11 @@
         <a href="projects.html">Projects</a>
     </div>
     <div id="brown-logo-container">
-        <img src="assets/brown_logo.png" alt="brown logo" width="225" height="225" id="brown-logo">
+        <img src="assets/brown_logo.jpg" alt="brown logo" width="225" height="225" id="brown-logo">
+<!--        <img src="assets/brown_logo_back.png" alt="brown logo" width="900" height="480" id="brown-logo">-->
+<!--        <img src="assets/cnn.png" alt="brown logo" width="627" height="1200" id="brown-logo">-->
     </div>
+    <img src="assets/cnn2.png" alt="brown logo" width="612" height="298" id="bg-photo">
     <div id="about-body">
         <p>
             I am a 3rd year Computer Science student at Brown University. I am mainly interested in computer graphics
