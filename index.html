@@ -17,7 +17,7 @@
         }
 
         #container {
-            position: relative;
+            position: fixed;
         }
 
         #gfx-main {
@@ -25,7 +25,7 @@
         }
 
         #buttons {
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
             z-index: 2;
@@ -36,7 +36,7 @@
         }
 
         #title {
-            position: absolute;
+            position: fixed;
             top: 30px; /* Adjust the top position as needed */
             left: 100px; /* Adjust the left position as needed */
             z-index: 2; /* Higher z-index to appear on top of the canvas */
@@ -50,9 +50,9 @@
         #footer-btn {
             position: fixed;
             bottom: 0;
-            padding: 40px;
+            padding-bottom: 40px;
             z-index: 2;
-            width: 92vw;
+            width: 100vw;
         }
         #footer-btn button {
             display: block;
