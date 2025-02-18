@@ -107,6 +107,13 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
+        #details-footer a {
+            text-decoration: underline;
+            color: inherit;
+            box-shadow: none;
+        }
+
+
     </style>
 </head>
 <body>
@@ -121,12 +128,91 @@
     </div>
     <div id="body-container">
         <div id="canvas-container">
-            <canvas id="gfx-main" width="800" height = "600"></canvas>
+            <canvas id="gfx-main" width="800" height="600"></canvas>
+<!--            <video id="turbogs-video" width="800" height="600" style="display: none;" loop muted>-->
+<!--                <source src="assets/turbogs.mp4" type="video/mp4">-->
+<!--            </video>-->
+<!--            <img id="path-tracer-output" src="assets/pathmirror.png" width="800" height="600" style="display: none;">-->
+<!--            <img id="stable-nerf-output" src="assets/stablenerf2.png" width="800" height="600" style="display: none;">-->
+<!--            <button id="next-btn">→</button>-->
             <div id="canvas-footer">
-                <p>Rendering with my WebGPU graphics library</p>
+                <p id="canvas-text">Rendering with my WebGPU graphics library</p>
             </div>
         </div>
+<!--        <button id="prev-btn">←</button>-->
         <div id="projects-body">
+            <div class="project-description">
+                <h2>Monte Carlo Path Tracer</h2>
+                <p>
+                    I developed a physically based renderer using Monte Carlo path tracing to simulate realistic global illumination.
+                    This renderer is capable of rendering features such as soft shadows, color bleeding, caustics,
+                    fresnel refractions, and image-based lighting for high-fidelity images. To reduce noise in
+                    the outputs, I also implemented importance sampling and low discrepancy quasi-random sampling.
+                </p>
+                <p>
+                    <b>Skills:</b> C++, Eigen, Physically Based Rendering, Ray Tracing, Computer Graphics
+                </p>
+            </div>
+
+<!--            <div class="project-description">-->
+<!--                <h2>Mesh Processing Engine</h2>-->
+<!--                <p>-->
+<!--                    Implemented a **mesh processing engine** with support for **subdivision, simplification, remeshing, and denoising**.-->
+<!--                    Designed a robust **half-edge data structure** to efficiently manage and manipulate mesh topology.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <b>Skills:</b> C++, Eigen, Geometry Processing, Computational Geometry-->
+<!--                </p>-->
+<!--            </div>-->
+
+            <div class="project-description">
+                <h2>Stable NeRF</h2>
+                <p>
+                    Stable NeRF in an integration of Neural Radiance Fields (NeRF) with Stable Diffusion to enable
+                    geometrically consistent one-shot novel view generation. It uses an Instant NGP/Tiny-CUDA-NN
+                    based latent space neural feature field to generate novel view feature maps in the latent space.
+                    A Stable Diffusion network, fined tuned with IP Adapters, is conditioned on these feature maps
+                    and the camera parameters as plucker coordinates,
+                </p>
+                <p>
+                    <b>Skills:</b> Python, PyTorch, Fine-tuning, Neural Rendering, Generative AI, 3D Vision
+                </p>
+            </div>
+
+            <div class="project-description">
+                <h2>Turbo-GS</h2>
+                <p>
+                    As a part of Brown IVL (Interactive 3D Vision & Learning Lab), I contributed to the development of Turbo-GS,
+                    a research paper, recently published, focused on optimizing 3D Gaussian Splatting for real-time training.
+                    My contributions included implementing CUDA-based acceleration techniques and optimizing GPU workloads
+                    to enhance performance.
+                </p>
+                <p>
+                    <b>Skills:</b> PyTorch, C++, Cuda, GPU Optimization, Neural Rendering, Deep Learning
+                </p>
+            </div>
+<!--            <div class="project-description">-->
+<!--                <h2>Surface-Aligned Gaussian Splats</h2>-->
+<!--                <p>-->
+<!--                    Developed a novel approach for Gaussian Splatting by aligning splats to a mesh surface instead of a point cloud.-->
+<!--                    Introduced surface adherence loss during training, improving alignment and convergence speed.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <b>Skills:</b> Python, PyTorch, Computer Graphics, 3D Vision-->
+<!--                </p>-->
+<!--            </div>-->
+
+<!--            <div class="project-description">-->
+<!--                <h2>3D Digital Laser Scanner</h2>-->
+<!--                <p>-->
+<!--                    Built a 3D laser scanner software pipeline in C++ to process scanned images and reconstruct high-accuracy digital-->
+<!--                    models using triangulation and laser line detection.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <b>Skills:</b> C++, Computer Vision, Image Processing-->
+<!--                </p>-->
+<!--            </div>-->
+
             <div class="project-description">
                 <h2>GFX-MAIN</h2>
                 <p>
@@ -137,37 +223,39 @@
                     this website.
                 </p>
                 <p>
-                    <b>Skills:</b> TypeScript, JavaScript, WebGPU, WGSL
+                    <b>Skills:</b> TypeScript, JavaScript, WebGPU, WGSL, Real-Time Rendering, 3D Graphics
                 </p>
             </div>
-            <div class="project-description">
-                <h2>3D Poisson Equation Solver</h2>
-                <p>
-                    This is a 3D Poisson equation solver that I developed as a final project for my graduate-level
-                    parallel computing course. It uses the Jacobi iterative method and the Gauss-Seidel Red-Black
-                    method to solve the Poisson equation in 3D. It is written in C++ and uses OpenMP, MPI, and CUDA for
-                    parallelization on CPU and GPU.
-                </p>
-                <p>
-                    <b>Skills:</b> C++, OpenMP, MPI, CUDA
-                </p>
-            </div>
-            <div class="project-description">
-                <h2>3D Gaussian Splatting Camera Optimization</h2>
-                <p>
-                    For this project, we built on the 3D Gaussian Splatting for Real-Time Radiance Field Rendering
-                    research paper Kerbl et al. (2023) and used AI to do camera optimization to find the most memorable
-                    camera position in the 3D space. We used PyTorch to do training on the differentiable renderer and
-                    find the optimal camera position based on the ResMem score achieved by the image rendered from that
-                    camera position.
-                </p>
-                <p>
-                    <b>Skills:</b> Python, PyTorch
-                </p>
-            </div>
+
+<!--            <div class="project-description">-->
+<!--                <h2>3D Poisson Equation Solver</h2>-->
+<!--                <p>-->
+<!--                    This is a 3D Poisson equation solver that I developed as a final project for my graduate-level-->
+<!--                    parallel computing course. It uses the Jacobi iterative method and the Gauss-Seidel Red-Black-->
+<!--                    method to solve the Poisson equation in 3D. It is written in C++ and uses OpenMP, MPI, and CUDA for-->
+<!--                    parallelization on CPU and GPU.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <b>Skills:</b> C++, OpenMP, MPI, CUDA-->
+<!--                </p>-->
+<!--            </div>-->
+
+<!--            <div class="project-description">-->
+<!--                <h2>3D Gaussian Splatting Camera Optimization</h2>-->
+<!--                <p>-->
+<!--                    For this project, we built on the 3D Gaussian Splatting for Real-Time Radiance Field Rendering-->
+<!--                    research paper Kerbl et al. (2023) and used AI to do camera optimization to find the most memorable-->
+<!--                    camera position in the 3D space. We used PyTorch to do training on the differentiable renderer and-->
+<!--                    find the optimal camera position based on the ResMem score achieved by the image rendered from that-->
+<!--                    camera position.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <b>Skills:</b> Python, PyTorch-->
+<!--                </p>-->
+<!--            </div>-->
             <br/>
             <p id="details-footer">
-                ... and more!
+                <a href="./assets/Emre Arslan CV.pdf" target="_blank">... and more!</a>
             </p>
         </div>
     </div>
